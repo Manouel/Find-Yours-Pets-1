@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Find Yours Pets"
+            android:text="@string/title"
             android:id="@+id/title"
             android:layout_gravity="center_horizontal"
             android:layout_weight="0.06"
@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Login"
+            android:text="@string/login"
             android:id="@+id/loginLabel"
             android:layout_gravity="center_horizontal"
             android:textSize="25dp"
@@ -56,7 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Mot de passe"
+            android:text="@string/password"
             android:id="@+id/passwordLabel"
             android:layout_gravity="center_horizontal"
             android:layout_weight="0.05"
@@ -74,7 +74,7 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Se connecter"
+            android:text="@string/connectionText"
             android:id="@+id/connectionButton"
             android:layout_gravity="bottom"
             android:layout_marginBottom="0dp"
@@ -89,7 +89,7 @@
         <Button
             android:layout_width="161dp"
             android:layout_height="wrap_content"
-            android:text="S&apos;incrire"
+            android:text="@string/registerText"
             android:id="@+id/registrationButton"
             android:layout_gravity="center_horizontal|bottom" />
 
