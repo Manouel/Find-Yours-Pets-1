@@ -3,7 +3,8 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="company.darktheme.find_yours_pets.RegistrationActivity">
 
     <LinearLayout
         android:orientation="vertical"
@@ -44,13 +45,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/login"
-            android:layout_weight="0.13" />
+            android:layout_weight="0.05" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.16" />
+            android:layout_weight="0.10" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -69,30 +70,54 @@
             android:ems="10"
             android:id="@+id/password"
             android:layout_gravity="center_horizontal"
-            android:layout_weight="0.10" />
+            android:layout_weight="0.05" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Mot de passe"
+            android:id="@+id/passwordConfirmationLabel"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.05"
+            android:textSize="25dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/passwordConfirmation"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.05" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Mail"
+            android:id="@+id/mailLabel"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.05"
+            android:textSize="25dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/mail"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.05" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Se connecter"
+            android:text="S'inscrire"
             android:id="@+id/connectionButton"
             android:layout_gravity="bottom"
             android:layout_marginBottom="0dp"
             android:layout_weight="0.08" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="0.27" />
-
-        <Button
-            android:layout_width="161dp"
-            android:layout_height="wrap_content"
-            android:text="S&apos;incrire"
-            android:id="@+id/registrationButton"
-            android:layout_gravity="center_horizontal|bottom" />
-
     </LinearLayout>
-
 </RelativeLayout>
