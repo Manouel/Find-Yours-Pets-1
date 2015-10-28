@@ -15,7 +15,17 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button connectionButton = (Button) findViewById(R.id.connectionButton);
         Button registrationButton = (Button) findViewById(R.id.registrationButton);
+
+        //Listening to button event
+        connectionButton.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View arg0) {
+                Intent homeScreen = new Intent(getApplicationContext(), HomeActivity.class);
+                startActivity(homeScreen);
+            }
+        });
 
         //Listening to button event
         registrationButton.setOnClickListener(new View.OnClickListener() {
