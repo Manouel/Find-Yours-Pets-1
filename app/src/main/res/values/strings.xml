@@ -13,4 +13,6 @@
     <string name="title">Find Yours Pets</string>
     <string name="title_activity_animal_profile">Animal Profile</string>
     <string name="title_activity_user_profile">User Profile</string>
+    <string name="title_activity_home">Home</string>
+    <string name="hello_world">Hello world!</string>
 </resources>
