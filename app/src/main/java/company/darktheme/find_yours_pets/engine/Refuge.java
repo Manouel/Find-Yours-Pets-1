@@ -3,6 +3,9 @@ package company.darktheme.find_yours_pets.engine;
 import java.util.ArrayList;
 import java.util.List;
 
+import company.darktheme.find_yours_pets.engine.animal.Animal;
+import company.darktheme.find_yours_pets.engine.user.UserSPA;
+
 /**
  * Created by jimmy on 22/10/15.
  */
@@ -26,11 +29,16 @@ public class Refuge {
 
     private List<Picture> pictures = new ArrayList<>();
 
-    public Refuge(String name, String address, String tel, String description) {
+    public Refuge(String name, String address, String tel, String description, UserSPA firstAdmin) {
         this.name = name;
         this.address = address;
         this.tel = tel;
         this.description = description;
+
+        if(!administrator.contains(firstAdmin))
+            administrator.add(firstAdmin);
+
+        firstAdmin.setRefuge(this);
     }
 
     public String getName() {
@@ -67,5 +75,30 @@ public class Refuge {
 
     public List<Picture> getPictures() {
         return pictures;
+    }
+
+    public void addAnimal(Animal a) {
+        if(a != null) {
+            if(!animals.contains(a)) {
+                if(a.getRefuge() == this) {
+                    animals.add(a);
+                }
+            }
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "Refuge{" +
+                "name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", longitude=" + longitude +
+                ", latitude=" + latitude +
+                ", tel='" + tel + '\'' +
+                ", description='" + description + '\'' +
+                ", administrator=" + administrator +
+                ", animals=" + animals +
+                ", pictures=" + pictures +
+                '}';
     }
 }

@@ -1,9 +1,10 @@
-package company.darktheme.find_yours_pets.engine;
-
-import android.provider.ContactsContract;
+package company.darktheme.find_yours_pets.engine.user;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import company.darktheme.find_yours_pets.engine.Picture;
+import company.darktheme.find_yours_pets.engine.animal.Animal;
 
 /**
  * Created by jimmy on 22/10/15.
@@ -74,5 +75,20 @@ public abstract class User {
 
     public List<Animal> getFollowing() {
         return following;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", pseudo='" + pseudo + '\'' +
+                ", tel='" + tel + '\'' +
+                ", role=" + role +
+                ", animalsAdopted=" + animalsAdopted +
+                ", picture=" + picture +
+                ", following=" + following +
+                '}';
     }
 }

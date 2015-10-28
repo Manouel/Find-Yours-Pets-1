@@ -1,4 +1,4 @@
-package company.darktheme.find_yours_pets.engine;
+package company.darktheme.find_yours_pets.engine.animal;
 
 /**
  * Created by jimmy on 22/10/15.
