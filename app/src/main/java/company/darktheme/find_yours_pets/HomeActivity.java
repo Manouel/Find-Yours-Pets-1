@@ -2,17 +2,16 @@ package company.darktheme.find_yours_pets;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import company.darktheme.find_yours_pets.engine.SimulationBD;
 import company.darktheme.find_yours_pets.engine.animal.Animal;
-import company.darktheme.find_yours_pets.tools.ActivityClass;
 import company.darktheme.find_yours_pets.tools.MenuManager;
 
 public class HomeActivity extends Activity {
@@ -26,8 +25,6 @@ public class HomeActivity extends Activity {
 
         SimulationBD.create();
 
-        Toast toast = Toast.makeText(getApplicationContext(), Integer.toString(SimulationBD.animals.size()), Toast.LENGTH_SHORT);
-        toast.show();
         for (Animal a : SimulationBD.animals) {
             LinearLayout petLayout = new LinearLayout(this);
             petLayout.setOrientation(LinearLayout.VERTICAL);
@@ -37,6 +34,7 @@ public class HomeActivity extends Activity {
 
             TextView petName = new TextView(this);
             petName.setText(a.getName());
+            petName.setGravity(Gravity.CENTER);
 
             petLayout.addView(petPicture);
             petLayout.addView(petName);
