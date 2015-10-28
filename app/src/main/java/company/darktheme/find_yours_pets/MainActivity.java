@@ -35,6 +35,16 @@ public class MainActivity extends Activity {
                 startActivity(registrationScreen);
             }
         });
+
+        Button animalProfile = (Button) findViewById(R.id.animal_button_profile);
+
+        animalProfile.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View arg0) {
+                Intent registrationScreen = new Intent(getApplicationContext(), AnimalProfileActivity.class);
+                startActivity(registrationScreen);
+            }
+        });
     }
 
     @Override

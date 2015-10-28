@@ -11,5 +11,8 @@
     <string name="mail">Mail</string>
     <string name="title">Find Yours Pets</string>
     <string name="app_name">Find-Yours-Pets</string>
+    <string name="title_activity_animal_profile">Profil Animal</string>
+    <string name="title_activity_user_profile">Profil Utilisateur</string>
     <string name="title_activity_home">Accueil</string>
+    <string name="action_profile">Profil</string>
 </resources>

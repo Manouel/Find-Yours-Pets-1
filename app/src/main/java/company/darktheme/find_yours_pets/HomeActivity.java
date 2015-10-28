@@ -4,8 +4,6 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -14,6 +12,8 @@ import android.widget.Toast;
 
 import company.darktheme.find_yours_pets.engine.SimulationBD;
 import company.darktheme.find_yours_pets.engine.animal.Animal;
+import company.darktheme.find_yours_pets.tools.ActivityClass;
+import company.darktheme.find_yours_pets.tools.MenuManager;
 
 public class HomeActivity extends Activity {
 
@@ -47,23 +47,12 @@ public class HomeActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_home, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+        return MenuManager.defaultMenu(this, item.getItemId()) || super.onOptionsItemSelected(item);
     }
 }

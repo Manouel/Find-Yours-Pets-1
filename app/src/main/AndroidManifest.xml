@@ -21,6 +21,14 @@
             android:label="@string/title_activity_registration" >
         </activity>
         <activity
+            android:name=".AnimalProfileActivity"
+            android:label="@string/title_activity_animal_profile" >
+        </activity>
+        <activity
+            android:name=".UserProfileActivity"
+            android:label="@string/title_activity_user_profile" >
+        </activity>
+        <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home" >
         </activity>
