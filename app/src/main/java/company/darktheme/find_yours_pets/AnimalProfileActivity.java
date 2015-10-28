@@ -1,25 +1,22 @@
 package company.darktheme.find_yours_pets;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 
-/**
- * Created by jimmy on 28/10/15.
- */
 public class AnimalProfileActivity extends Activity {
 
-    ImageView profile;
+    private ImageView profile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_animal_profil);
+        setContentView(R.layout.activity_main);
 
-        profile = (ImageView) findViewById(R.id.AnimalProfilePicture);
-        profile.setImageResource(R.drawable.dogi);
+        profile.setImageResource(R.drawable.dog);
 
 
     }
@@ -27,7 +24,7 @@ public class AnimalProfileActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_registration, menu);
+        getMenuInflater().inflate(R.menu.menu_home, menu);
         return true;
     }
 
@@ -36,14 +33,16 @@ public class AnimalProfileActivity extends Activity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        switch (item.getItemId()) {
+            case R.id.action_settings :
+                return true;
+            case R.id.action_profile :
+                Intent profile_screen = new Intent(getApplicationContext(), AnimalProfileActivity.class);
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+                startActivity(profile_screen);
+                return true;
         }
 
         return super.onOptionsItemSelected(item);
     }
-
 }
