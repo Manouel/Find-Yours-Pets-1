@@ -11,4 +11,6 @@
     <string name="passwordConfirmation">Password Confirmation</string>
     <string name="mail">Mail</string>
     <string name="title">Find Yours Pets</string>
+    <string name="title_activity_animal_profile">Animal Profile</string>
+    <string name="title_activity_user_profile">User Profile</string>
 </resources>
